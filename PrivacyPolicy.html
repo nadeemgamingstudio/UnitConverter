@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Privacy Policy · OmniUnit: Ultimate Converter</title>
+  <!-- Google Fonts: modern and clean -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #eef2ff 0%, #e0eaff 40%, #d9e3fc 100%);
+      /* fresh blue gradient — tech & conversion vibes */
+      font-family: 'Inter', 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+      color: #1a2c3e;
+      padding: 2rem 1.5rem;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* floating conversion icons */
+    body::before {
+      content: "📐⚖️📏🌡️💱📐⚙️";
+      position: fixed;
+      bottom: 12px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 34px;
+      opacity: 0.1;
+      pointer-events: none;
+      white-space: nowrap;
+      z-index: 0;
+      letter-spacing: 16px;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Hero section with icon and gradient */
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2.8rem 1.8rem;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      border-radius: 72px;
+      box-shadow: 0 28px 45px -14px rgba(0, 0, 0, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+    .app-icon {
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 20px;
+      background: linear-gradient(135deg, #2c7da0, #1f6390);
+      border-radius: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 30px -8px rgba(0, 60, 90, 0.3);
+      transition: transform 0.2s;
+    }
+    .app-icon img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+      border-radius: 22px;
+    }
+    .app-icon:hover {
+      transform: scale(1.02);
+    }
+    .hero h1 {
+      font-family: 'Space Grotesk', 'Inter', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(120deg, #1f6390, #3b9bcf, #7fcdff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.5px;
+    }
+    .app-badge {
+      display: inline-block;
+      background: rgba(46, 125, 170, 0.2);
+      backdrop-filter: blur(6px);
+      padding: 7px 24px;
+      border-radius: 60px;
+      font-weight: 600;
+      color: #1d6f9c;
+      font-size: 0.85rem;
+      margin-top: 12px;
+      border: 1px solid #bbdef5;
+    }
+    .dev-info {
+      margin-top: 18px;
+      font-weight: 500;
+      color: #2a6e93;
+    }
+    .dev-info a {
+      color: #2c86b3;
+      text-decoration: none;
+      border-bottom: 2px dotted #8fcbff;
+    }
+    .effective-badge {
+      background: #ffffffcc;
+      backdrop-filter: blur(4px);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.4rem 1.6rem;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1f6390;
+      margin-top: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+
+    /* 2-column layout */
+    .policy-wrapper {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .policy-content {
+      flex: 3;
+      min-width: 260px;
+    }
+    .toc-column {
+      flex: 1;
+      min-width: 260px;
+      position: sticky;
+      top: 2rem;
+      align-self: start;
+    }
+
+    /* glass card style — modern & crisp */
+    .convert-card {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      border-radius: 44px;
+      padding: 1.6rem 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.05);
+      transition: all 0.25s;
+    }
+    .convert-card:hover {
+      background: rgba(255, 255, 255, 0.92);
+      border-color: #cbe5fe;
+      transform: translateY(-2px);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 1.2rem;
+    }
+    .card-header i {
+      font-size: 2rem;
+      background: linear-gradient(145deg, #2c7da0, #1a5e85);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    h2 {
+      font-family: 'Space Grotesk', 'Inter', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      background: linear-gradient(120deg, #216e98, #398ab3);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin: 0;
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #276f99;
+      margin: 0.8rem 0 0.5rem;
+      border-left: 5px solid #50b0e0;
+      padding-left: 14px;
+    }
+    p, li {
+      color: #244c66;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+    ul, ol {
+      margin: 0.7rem 0 1rem 1.5rem;
+    }
+    li {
+      margin: 0.45rem 0;
+    }
+    .highlight-convert {
+      background: linear-gradient(105deg, #eef4fd, #e3effa);
+      border-radius: 28px;
+      padding: 1rem 1.6rem;
+      margin: 1.2rem 0;
+      border-left: 7px solid #2f9bce;
+    }
+    .feature-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #d8eaff;
+      border-radius: 60px;
+      padding: 0.25rem 1.2rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #1a6186;
+    }
+
+    /* TOC */
+    .toc-converter {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border-radius: 44px;
+      padding: 1.6rem 1.2rem;
+      border: 1px solid #e2f0ff;
+      box-shadow: 0 15px 28px -12px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 30px;
+    }
+    .toc-converter h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #2f7ba3;
+      border-bottom: 2px dashed #bddaf5;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toc-list {
+      list-style: none;
+      padding: 0;
+    }
+    .toc-list li {
+      margin: 0.85rem 0;
+    }
+    .toc-list a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #376e8f;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+    .toc-list a i {
+      font-size: 0.8rem;
+      color: #3ea0cf;
+    }
+    .toc-list a:hover {
+      color: #216f99;
+      transform: translateX(6px);
+    }
+
+    .btn-convert {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(95deg, #2980b9, #1f6390);
+      padding: 8px 26px;
+      border-radius: 60px;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 5px 12px rgba(30, 90, 120, 0.3);
+      transition: all 0.2s;
+    }
+    .btn-convert:hover {
+      transform: scale(0.96);
+      background: linear-gradient(95deg, #1f6b99, #16547a);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 48px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #346e91;
+    }
+
+    @media (max-width: 860px) {
+      .policy-wrapper { flex-direction: column; }
+      .toc-column { position: static; width: 100%; }
+      .hero h1 { font-size: 2rem; }
+      .app-icon { width: 100px; height: 100px; }
+      .app-icon img { width: 76px; height: 76px; }
+      .convert-card { padding: 1.2rem; }
+    }
+    .tiny-metrics {
+      font-size: 0.7rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Hero: centered icon and title -->
+  <div class="hero">
+    <div class="app-icon">
+      <img src="https://raw.githubusercontent.com/nadeemgamingstudio/UnitConverter/refs/heads/main/icon.png" alt="OmniUnit: Ultimate Converter Icon" onerror="this.src='https://placehold.co/130x130?text=📐'">
+    </div>
+    <h1>📐 OmniUnit: Ultimate Converter ⚡</h1>
+    <div class="app-badge">
+      <i class="fas fa-arrows-spin"></i> length · mass · currency · temperature · data · speed
+    </div>
+    <div class="dev-info">
+      <i class="fas fa-crown"></i> Developed by <strong>Nadeem Gaming Studio</strong> &nbsp;|&nbsp; 📧 <a href="mailto:nadeemgamer180@gmail.com">nadeemgamer180@gmail.com</a>
+    </div>
+    <div class="effective-badge">
+      <i class="far fa-calendar-alt"></i> Privacy policy effective: <span id="effectiveDate"></span>
+    </div>
+  </div>
+
+  <div class="policy-wrapper">
+    <!-- main content sections -->
+    <div class="policy-content">
+      
+      <!-- intro -->
+      <div class="convert-card" id="overview">
+        <div class="card-header">
+          <i class="fas fa-globe"></i>
+          <h2>🔍 Privacy overview</h2>
+        </div>
+        <p><strong>OmniUnit: Ultimate Converter</strong> is a powerful, lightning-fast unit converter for everyday use — from length and weight to currency, temperature, data storage, and speed. We value your privacy and believe in complete transparency. This policy explains what data we collect, why we need it, and how you stay in full control.</p>
+        <div class="highlight-convert">
+          <i class="fas fa-shield-heart"></i> <strong>Our commitment:</strong> No selling of personal data, minimal data collection, full compliance with global privacy laws (GDPR/CCPA). Your trust is the core of our unit conversion engine.
+        </div>
+      </div>
+
+      <!-- 1. Data collection -->
+      <div class="convert-card" id="datacollect">
+        <div class="card-header">
+          <i class="fas fa-database"></i>
+          <h2>📊 1. What data we collect</h2>
+        </div>
+        <p>OmniUnit is designed to be lightweight and privacy-first. We collect only anonymous, non‑personal information to improve app performance and stability:</p>
+        <ul>
+          <li><strong>📱 Device & technical info</strong> — model, OS version, language, country, advertising identifier (AAID / IDFA), IP address (anonymized). Used for analytics & ads.</li>
+          <li><strong>⚙️ App usage & preferences</strong> — last used categories, favorite conversions, theme preference (dark/light). Stored locally on your device.</li>
+          <li><strong>📢 Ad interaction data</strong> — via Google AdMob. AdMob may use identifiers to serve contextual or non-personalized ads. No personal data is shared.</li>
+          <li><strong>💎 No account or personal info required</strong> — you can use all conversion features without creating an account or providing any personal details.</li>
+        </ul>
+        <p><i class="fas fa-microchip"></i> We never access your contacts, media, files, or precise location.</p>
+      </div>
+
+      <!-- 2. How we use data -->
+      <div class="convert-card" id="howuse">
+        <div class="card-header">
+          <i class="fas fa-magic"></i>
+          <h2>⚙️ 2. How we use your data</h2>
+        </div>
+        <p>Your information helps us deliver the smoothest conversion experience:</p>
+        <ul>
+          <li><i class="fas fa-chart-line"></i> <strong>Improve app performance & stability</strong> — using Firebase Analytics & Crashlytics to identify bugs and optimize speed.</li>
+          <li><i class="fas fa-ad"></i> <strong>Display relevant ads</strong> (optional interstitials and banners) via Google AdMob to keep the app free.</li>
+          <li><i class="fas fa-palette"></i> <strong>Save user preferences</strong> — like dark mode or favorite conversion units.</li>
+          <li><i class="fas fa-chart-simple"></i> <strong>Aggregate usage statistics</strong> to understand which converters are most popular.</li>
+        </ul>
+        <div class="highlight-convert">
+          <i class="fas fa-ban"></i> We do not sell, rent, or share your personal information with third parties for their own marketing.
+        </div>
+      </div>
+
+      <!-- 3. Third-party services -->
+      <div class="convert-card" id="thirdparty">
+        <div class="card-header">
+          <i class="fas fa-handshake"></i>
+          <h2>🔌 3. Third‑party services (SDKs)</h2>
+        </div>
+        <p>To provide core functionalities, we integrate with trusted partners:</p>
+        <ul>
+          <li><strong>Google AdMob</strong> – advertising. May collect device data and IP for ad relevance. <a href="https://policies.google.com/privacy" target="_blank" style="color:#2980b9;">Google Privacy Policy</a>.</li>
+          <li><strong>Firebase Analytics & Crashlytics</strong> – anonymized crash reports and usage metrics. Helps us keep OmniUnit ultra‑stable.</li>
+          <li><strong>Google Play Billing</strong> – if you choose to remove ads via in‑app purchase, Google Play processes the transaction. We never see payment details.</li>
+        </ul>
+        <p>All third parties comply with GDPR, CCPA, and other applicable privacy frameworks.</p>
+      </div>
+
+      <!-- 4. Data retention & deletion -->
+      <div class="convert-card" id="dataretention">
+        <div class="card-header">
+          <i class="fas fa-trash-alt"></i>
+          <h2>🗑️ 4. Data retention & deletion</h2>
+        </div>
+        <p>Your conversion history and settings remain on your device only. Uninstalling OmniUnit removes all local data. No server-side account exists. To request deletion of any analytics data linked to your advertising ID, email us at <a href="mailto:nadeemgamer180@gmail.com" style="color:#2c86b3;">nadeemgamer180@gmail.com</a>. We’ll respond within 30 days.</p>
+        <p>You can reset your advertising ID anytime: <strong>Android Settings → Google → Ads → Reset advertising ID</strong>.</p>
+      </div>
+
+      <!-- 5. Ad choices & opt-out -->
+      <div class="convert-card" id="adchoices">
+        <div class="card-header">
+          <i class="fas fa-ad"></i>
+          <h2>🎯 5. Your ad choices</h2>
+        </div>
+        <p>We respect your advertising preferences:</p>
+        <ul>
+          <li>On Android: <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong>.</li>
+          <li>You may also purchase the “Remove Ads” feature (one‑time IAP) to enjoy an ad‑free experience.</li>
+          <li>For users under the age of consent, only non‑personalized contextual ads are shown.</li>
+        </ul>
+        <div class="feature-pill"><i class="fas fa-child"></i> Child‑safe compliance (COPPA / GDPR‑K) enabled</div>
+      </div>
+
+      <!-- 6. Children's privacy -->
+      <div class="convert-card" id="children">
+        <div class="card-header">
+          <i class="fas fa-child"></i>
+          <h2>🧸 6. Children's privacy (COPPA / GDPR‑K)</h2>
+        </div>
+        <p><strong>OmniUnit: Ultimate Converter</strong> is intended for general audiences, including children. We do not knowingly collect personal information from children under 13 (or under 16 in the EEA).</p>
+        <ul>
+          <li>No personal data (name, email, contact) is required to use the converter.</li>
+          <li>If the Play Store identifies a child account, personalized ads are automatically disabled.</li>
+          <li>Parents: if you believe your child has provided any personal information (e.g., via customer support), contact us immediately and we will delete it.</li>
+        </ul>
+      </div>
+
+      <!-- 7. Data security -->
+      <div class="convert-card" id="security">
+        <div class="card-header">
+          <i class="fas fa-lock"></i>
+          <h2>🔒 7. Security measures</h2>
+        </div>
+        <p>We implement industry‑standard security: encrypted network connections (TLS), minimal data retention, and restricted internal access. While no system is 100% invulnerable, we continuously update our practices to protect your information.</p>
+      </div>
+
+      <!-- 8. Your privacy rights -->
+      <div class="convert-card" id="rights">
+        <div class="card-header">
+          <i class="fas fa-user-check"></i>
+          <h2>📜 8. Your privacy rights</h2>
+        </div>
+        <p>Depending on your location (EEA, UK, California, Brazil, India), you may have the right to:</p>
+        <ul>
+          <li>Access any personal data we might hold (linked to advertising ID).</li>
+          <li>Request correction or deletion of such data.</li>
+          <li>Opt out of “sale” of personal data (we never sell).</li>
+          <li>Withdraw consent for analytics by resetting your advertising ID.</li>
+        </ul>
+        <p>To exercise any right, email <strong>nadeemgamer180@gmail.com</strong> with subject “Privacy Request – OmniUnit Converter”. We will respond promptly.</p>
+      </div>
+
+      <!-- 9. Changes to policy -->
+      <div class="convert-card" id="updates">
+        <div class="card-header">
+          <i class="fas fa-sync-alt"></i>
+          <h2>🔄 9. Changes to this Privacy Policy</h2>
+        </div>
+        <p>We may update this policy from time to time. If changes are significant, we will notify you via an in‑app notice or update the effective date above. Continued use of OmniUnit after changes means you accept the revised policy.</p>
+      </div>
+
+      <!-- 10. Contact -->
+      <div class="convert-card" id="contact">
+        <div class="card-header">
+          <i class="fas fa-envelope-open-text"></i>
+          <h2>📧 10. Contact us</h2>
+        </div>
+        <p>Questions, suggestions, or privacy concerns? We’re just a message away.</p>
+        <div style="background: #e9f2fa; border-radius: 36px; padding: 1rem 1.5rem;">
+          <p><i class="fas fa-building"></i> <strong>Nadeem Gaming Studio</strong><br>
+          📧 <a href="mailto:nadeemgamer180@gmail.com" style="font-weight: 700; color: #1f6a96;">nadeemgamer180@gmail.com</a><br>
+          ⚡ <strong>OmniUnit: Ultimate Converter — convert anything, anywhere</strong></p>
+          <a href="mailto:nadeemgamer180@gmail.com?subject=Privacy%20Inquiry%20OmniUnit" class="btn-convert"><i class="fas fa-envelope"></i> Send Privacy Request</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky TOC aside -->
+    <aside class="toc-column">
+      <div class="toc-converter">
+        <h4><i class="fas fa-compass"></i> Navigation</h4>
+        <ul class="toc-list">
+          <li><a href="#overview"><i class="fas fa-circle-info"></i> Overview</a></li>
+          <li><a href="#datacollect"><i class="fas fa-database"></i> Data we collect</a></li>
+          <li><a href="#howuse"><i class="fas fa-magic"></i> How we use data</a></li>
+          <li><a href="#thirdparty"><i class="fas fa-handshake"></i> Third parties</a></li>
+          <li><a href="#dataretention"><i class="fas fa-trash-alt"></i> Retention & deletion</a></li>
+          <li><a href="#adchoices"><i class="fas fa-ad"></i> Ad choices</a></li>
+          <li><a href="#children"><i class="fas fa-child"></i> Children's privacy</a></li>
+          <li><a href="#security"><i class="fas fa-lock"></i> Security</a></li>
+          <li><a href="#rights"><i class="fas fa-user-check"></i> Your rights</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <hr style="margin: 1.5rem 0; border-color: #cbe2f5;">
+        <div class="tiny-metrics" style="text-align: center">
+          <i class="fas fa-ruler-combined"></i> 150+ units · 12 categories
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Nadeem Gaming Studio — OmniUnit: Ultimate Converter. Precision meets privacy. <br>
+    <i class="fas fa-chart-line"></i> Accurate, fast, private. <a href="mailto:nadeemgamer180@gmail.com" style="color:#266e95;">Support</a></p>
+  </footer>
+</div>
+
+<script>
+  // set effective date & copyright year
+  const today = new Date();
+  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('effectiveDate').textContent = today.toLocaleDateString(undefined, dateOptions);
+  document.getElementById('year').textContent = today.getFullYear();
+
+  // smooth scroll for all anchor links
+  document.querySelectorAll('.toc-list a, .btn-convert').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
